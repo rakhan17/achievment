@@ -1,0 +1,54 @@
+name: Documentation improvement
+description: Suggest a clear, accurate, and useful documentation change.
+title: "docs: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the documentation. Do not include passwords, access tokens, API keys, private keys, recovery codes, or other sensitive information.
+  - type: input
+    id: page_or_section
+    attributes:
+      label: Page or section
+      description: Which file, page, or section should be improved?
+      placeholder: "README.md - Contribution workflow"
+    validations:
+      required: true
+  - type: dropdown
+    id: change_type
+    attributes:
+      label: Type of improvement
+      description: Choose the closest match.
+      options:
+        - Clarification
+        - Correction
+        - Missing information
+        - Outdated information
+        - Structure or navigation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: current_issue
+    attributes:
+      label: What needs improvement?
+      description: Explain what is unclear, incorrect, missing, or outdated.
+      placeholder: Describe the current documentation issue.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_change
+    attributes:
+      label: Suggested improvement
+      description: Describe the change that would make the documentation better.
+      placeholder: Suggest wording, steps, examples, or supporting details.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Supporting references
+      description: Add relevant links or redacted screenshots if they help explain the suggestion. Do not share private or sensitive information.
+      placeholder: "https://..."
+    validations:
+      required: false
